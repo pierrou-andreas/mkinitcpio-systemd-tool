@@ -14,7 +14,10 @@
 
 # note:
 # dropbear-convert needs host keys in pem format
-# to regenerate host keys use: `ssh-keygen -A -m PEM`
+# to regenerate host keys use:
+# for format in dsa ecdsa ed25519 rsa; do
+#   ssh-keygen -A -p -m PEM -f /etc/ssh/ssh_host_${format}_key
+# done
 
 # service dependencies:
 # - https://www.archlinux.org/packages/community/x86_64/dropbear/
